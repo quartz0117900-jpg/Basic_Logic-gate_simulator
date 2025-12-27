@@ -40,12 +40,14 @@ function drawScene() {
         ctx.moveTo(switchB.x + switchB.w, switchB.y + 30);
         ctx.lineTo(300, 215);
     } else {
+        // Show a faded wire for the disabled switch
         ctx.save();
         ctx.strokeStyle = "#bdc3c7"; 
-        ctx.setLineDash([5, 5]); // Dotted line for inactive
+        ctx.setLineDash([5, 5]); // Dotted line starts
         ctx.moveTo(switchB.x + switchB.w, switchB.y + 30);
         ctx.lineTo(300, 215);
         ctx.stroke();
+        ctx.setLineDash([]); // <--- ADD THIS LINE to reset back to solid lines
         ctx.restore();
     }
     
@@ -208,5 +210,6 @@ function resetAll() {
     switchB.isOn = false;
     drawScene();
 }
+
 
 drawScene();
