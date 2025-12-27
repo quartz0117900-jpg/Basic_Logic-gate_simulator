@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Logic Gate Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Logic Gate Simulator</h1>
+<canvas id="gameCanvas" width="800" height="500" style="border:1px solid #000;"></canvas>
+
+<div class="controls" style="margin-top: 20px;">
+    <button onclick="setMode('AND')">AND Gate</button>
+    <button onclick="setMode('OR')">OR Gate</button>
+    <button onclick="setMode('NOT')">NOT Gate</button>
+    <button onclick="resetAll()" style="background-color: #e74c3c;">Reset All</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
